@@ -1,0 +1,63 @@
+.check-in {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+
+    h1 {
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 30px;
+    }
+}
+
+.checkin-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 50px 80px 50px;
+    input {
+        font-size: 18px;
+        color: #fff;
+        font-wight: bold;
+        background-color: #000;
+        border: none;
+        padding: 5px;
+        margin-top: 20px;
+        border-bottom: 1px solid #fff;
+        &:focus {
+            color: #fff;
+            outline: none;
+        }
+    }
+}
+
+.custom-select {
+    color: #fff;
+    font-size: 18px;
+    height: 35px;
+    border-bottom: 1px solid #fff;
+    background-color: #000;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+        &:focus {
+            outline: none;
+        }
+}
+
+.checkin-button {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}

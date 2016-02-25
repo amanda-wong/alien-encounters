@@ -20,9 +20,9 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
-      .state('checkin', {
-          url: '/checkin',
-          templateUrl: 'app/checkin/check-in.html',
+      .state('check-in', {
+          url: '/check-in',
+          templateUrl: 'app/check-in/check-in.html',
           controller: 'CheckinCtrl'
       })
       .state('encounters', {

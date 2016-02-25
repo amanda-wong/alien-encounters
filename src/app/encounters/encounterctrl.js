@@ -6,9 +6,18 @@
     .controller('EncountersCtrl', EncountersCtrl);
 
   /** @ngInject */
-  function EncountersCtrl($scope) {
-      this.online = true;
-      $scope.description = 'Angular Seed Application';
-  }
+  function EncountersCtrl($scope, $http) {
+      var ENCOUNTERS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
+
+      $http({
+          method: 'GET',
+          url: ENCOUNTERS_GET_URL
+      }).then(function(response){
+          $scope.encounters = response.data.encounters;
+      }, function(error){
+          // TODO: Handle error
+      });
+}
+
 
 })();

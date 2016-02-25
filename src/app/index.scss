@@ -8,7 +8,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
 $red-color: #ed4343;
-$red-font: 'Roboto Slab', serif;
+$red-font: 'Roboto', serif;
 
 html, body {
   width:100%;
@@ -16,6 +16,9 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: $red-font;
+  overflow: hidden;
+  font-weight: 100;
+  font-style: normal;
 }
 
 .browsehappy {
@@ -30,7 +33,7 @@ html, body {
 }
 
 .welcome {
-	
+
 	height: 100vh;
 
 	display:flex;
@@ -40,7 +43,7 @@ html, body {
 
 	img { width: 42%; }
   h1  { text-align:center; }
-  
+
 }
 
 /**

@@ -1,3 +1,12 @@
 <div class="check-in">
-    <h1>Check in</h1>
+    <h1>Register</h1>
+    <div class="checkin-form" action="">
+        <input type="text" placeholder="Name" ng-model="colonist.name"/>
+        <input type="number" placeholder="Age" ng-model="colonist.age"/>
+        <select name="jobs"  class="custom-select" id="jobs" ng-model="colonist.job_id">
+            <option value=""> Select a job </option>
+            <option value="{{ job.id }}" ng-repeat="job in jobs">{{job.name}}</option>
+        </select>
+    </div>
+    <button class="checkin-button" ng-click="login($event)">Check in</button>
 </div>

@@ -1,0 +1,41 @@
+.encounters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        line-height: 30%;
+        text-align: center;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .list-of-encounters {
+        overflow: scroll;
+        height: 100vh;
+            li {
+                list-style-type: none;
+                padding: 10px 0 10px 10px;
+                margin-right: 45px;
+            }
+
+            li:nth-child(odd) {
+                color: #fff;
+                background-color: #858585;
+            }
+    }
+}
+
+.report-button {
+    width: 100%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    padding: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}

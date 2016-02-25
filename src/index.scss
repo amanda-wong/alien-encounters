@@ -5,6 +5,7 @@
 // bower:scss
 // endbower
 
+@import "/main/main";
 @import "/check-in/check-in";
 @import "/encounters/encounters";
 @import "/report/report";
@@ -21,6 +22,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: $red-font;
+  overflow: hidden;
 }
 
 .browsehappy {
@@ -35,9 +37,7 @@ html, body {
 }
 
 .welcome {
-
 	height: 100vh;
-
 	display:flex;
 	align-items:center;
 	justify-content: center;
