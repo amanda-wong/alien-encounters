@@ -18,12 +18,12 @@
             li {
                 list-style-type: none;
                 padding: 10px 0 10px 10px;
-                margin-right: 45px;
+                margin-right: 35px;
             }
 
             li:nth-child(odd) {
                 color: #fff;
-                background-color: #858585;
+                background: darken($red-color, 30%);
             }
     }
 }

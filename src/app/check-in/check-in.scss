@@ -20,6 +20,7 @@
     flex-direction: column;
     margin: 0px 50px 80px 50px;
     input {
+        text-align: left;
         font-size: 18px;
         color: #fff;
         font-wight: bold;
@@ -38,7 +39,7 @@
 .custom-select {
     color: #fff;
     font-size: 18px;
-    height: 35px;
+    height: 60px;
     border-bottom: 1px solid #fff;
     background-color: #000;
     margin-top: 20px;
@@ -60,4 +61,31 @@
     &:focus {
         outline: none;
     }
+}
+
+.invalid {
+    input, select, textarea {
+        &.ng-invalid {
+            padding: 10px;
+            text-align: center;
+            animation: flashing 1s infinite;
+        }
+    }
+}
+
+@keyframes flashing {
+  0% {
+     border: 10px solid red;
+     opacity: .8;
+  }
+
+  50% {
+     border: 10px solid red;
+     opacity: .1;
+  }
+
+  100% {
+    border: 10px solid red;
+    opacity: .8;
+  }
 }

@@ -5,14 +5,13 @@
     .module('red')
     .controller('CheckinCtrl', CheckinCtrl);
 
-  /** @ngInject */
-  function CheckinCtrl($scope, $http) {
+  function CheckinCtrl($scope, $http, $cookies, $state, $rootScope) {
      var JOBS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
      var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
-    //placeholder object for POST request to /colonists
-     $scope.colonist = {};
 
-     // Request for fetching all jobs
+     $scope.colonist = {};
+     $scope.validate = false;
+
      $http({
          method: 'GET',
          url: JOBS_GET_URL
@@ -22,20 +21,42 @@
          // TODO: Handle error
      });
 
-     $scope.login = function(event) {
+    $scope.login = function(event) {
         event.preventDefault();
+
+        if($scope.checkinForm.$invalid) {
+             $scope.validate = true;
+             } else {
 
         $http({
             method:'POST',
             url: COLONIST_POST_URL,
             data: {
-                'colonist' : $scope.colonist
+             'colonist' : $scope.colonist
             }
         }).then(function(response){
-            console.log(response);
-        }, function(error){
-            console.log(error);
+            $cookies.putObject('session_colonist', response.data.colonist);
+             $state.go('encounters');
         });
+    }
+    // $scope.encounter = {
+    //     coloinst_id: $rootScope.colonist.id,
+    //     date: '2015-11-02'
+    // }
+    //     validate = true; {
+    //         else {
+    //             $http({
+    //                 method:'POST',
+    //                 url: COLONIST_POST_URL,
+    //                 data: {
+    //                     'colonist' : $scope.colonist
+    //                 }
+    //             })
+    //         }
+    //     }
+    // }
+
+
     };
   }
 
