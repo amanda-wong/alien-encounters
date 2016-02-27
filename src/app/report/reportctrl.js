@@ -14,6 +14,7 @@
             colonist_id: $cookies.getObject('session_colonist').id,
             date: $filter('date')(Date.now(), 'yyyy-MM-dd')
         };
+        // $scope.validate = false;
 
         $http({
             method: 'GET',
@@ -27,14 +28,15 @@
         $scope.report = function(event) {
            event.preventDefault();
 
+        // if($scope.reportForm.$invalid) {
+        //     $scope.validate = true;
+        //     } else {
+
            $http({
                method:'POST',
                url: REPORT_POST_URL,
                data: {
                    'encounter' : $scope.encounter
-                //    'date' : $scope.encounter.date,
-                //    'type' : $scope.aliens.type,
-                //    'action' : ''
                }
            }).then(function(response){
                $state.go('encounters');
@@ -42,6 +44,7 @@
            }, function(error){
                console.log(error);
            });
+    //    }
        };
      }
 

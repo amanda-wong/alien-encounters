@@ -1,0 +1,99 @@
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+    transition: all 2s ease-in;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+[ui-view].ng-enter {
+    .welcome & {
+        opacity: 1;
+
+    }
+    .check-in & {
+        transform: translate3d(500px, 0, 0);
+
+    }
+
+    // .encounters & {
+    //     -moz-transform: translate(-50px, 0px);
+    //     -webkit-transform: translate(-50px, 0px);
+    //     -o-transform: translate(-50px, 0px);
+    //     -ms-transform: translate(-50px, 0px);
+    //     transform: translate(-50px, 0px);
+    //
+    //
+    // }
+    //
+    // .report & {
+    //     -moz-transform: translate(-50px, 0px);
+    //     -webkit-transform: translate(-50px, 0px);
+    //     -o-transform: translate(-50px, 0px);
+    //     -ms-transform: translate(-50px, 0px);
+    //     transform: translate(-50px, 0px);
+    //
+    //
+    // }
+}
+
+[ui-view].ng-enter-active {
+    .welcome & {
+        opacity: 0;
+
+    }
+    .check-in & {
+        transform: translate3d(0, 0, 0);
+    }
+
+    // .encounters & {
+    //         transform: scale(1.1);
+    // }
+    //
+    // .report & {
+    //     transform: scale(1.1);
+    // }
+}
+
+[ui-view].ng-leave {
+    .welcome & {
+            opacity: 1;
+    }
+    .check-in & {
+            transform: scale3d(1, 1, 1);
+    }
+    //
+    // .encounters & {
+    //         transform: scale(1.1);
+    // }
+    //
+    // .report & {
+    //     transform: scale(1.1);
+    // }
+}
+
+[ui-view].ng-leave-active {
+    .welcome & {
+        opacity: 0;
+    }
+    .check-in & {
+        transform: scale3d(0, 0, 0);
+    }
+    //
+    // .encounters & {
+    //     -moz-transform: translate(-50px, 0px);
+    //     -webkit-transform: translate(-50px, 0px);
+    //     -o-transform: translate(-50px, 0px);
+    //     -ms-transform: translate(-50px, 0px);
+    //     transform: translate(-50px, 0px);
+    // }
+    //
+    // .report & {
+    //     -moz-transform: translate(-50px, 0px);
+    //     -webkit-transform: translate(-50px, 0px);
+    //     -o-transform: translate(-50px, 0px);
+    //     -ms-transform: translate(-50px, 0px);
+    //     transform: translate(-50px, 0px);
+    // }
+}

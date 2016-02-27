@@ -6,14 +6,14 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($log) {
-    //   $rootScope.$state = $state;
-    $log.debug('Run block end!');
-    //
-    // $rootScope.$on('stateChangeStart', function(event, toState){
-    //     $rootScope.stateName = toState.name;
-    //     $rootScope.user = $cookies.getObject('session_colonist');
-    // });
-  }
+  function runBlock($log, $rootScope, $state, $cookies) {
+    $rootScope.$state = $state;
 
+    $log.debug('Run block end!');
+
+    $rootScope.$on('$stateChangeStart', function(event, toState){
+      $rootScope.stateName = toState.name;
+      $rootScope.user = $cookies.getObject('session_colonist');
+    });
+  }
 })();

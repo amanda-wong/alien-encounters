@@ -39,24 +39,6 @@
              $state.go('encounters');
         });
     }
-    // $scope.encounter = {
-    //     coloinst_id: $rootScope.colonist.id,
-    //     date: '2015-11-02'
-    // }
-    //     validate = true; {
-    //         else {
-    //             $http({
-    //                 method:'POST',
-    //                 url: COLONIST_POST_URL,
-    //                 data: {
-    //                     'colonist' : $scope.colonist
-    //                 }
-    //             })
-    //         }
-    //     }
-    // }
-
-
     };
   }
 

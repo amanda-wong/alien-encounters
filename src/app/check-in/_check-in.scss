@@ -1,9 +1,10 @@
 .check-in {
     display: flex;
     flex-direction: column;
+    width: 100vw;
     height: 100vh;
     background-color: #000;
-    position: relative;
+    // position: relative;
 
     h1 {
         color: #fff;
@@ -39,10 +40,10 @@
 .custom-select {
     color: #fff;
     font-size: 18px;
-    height: 60px;
+    height: 40px;
     border-bottom: 1px solid #fff;
     background-color: #000;
-    margin-top: 20px;
+    margin-top: 40px;
     border: none;
     border-bottom: 1px solid #fff;
         &:focus {
@@ -61,31 +62,4 @@
     &:focus {
         outline: none;
     }
-}
-
-.invalid {
-    input, select, textarea {
-        &.ng-invalid {
-            padding: 10px;
-            text-align: center;
-            animation: flashing 1s infinite;
-        }
-    }
-}
-
-@keyframes flashing {
-  0% {
-     border: 10px solid red;
-     opacity: .8;
-  }
-
-  50% {
-     border: 10px solid red;
-     opacity: .1;
-  }
-
-  100% {
-    border: 10px solid red;
-    opacity: .8;
-  }
 }

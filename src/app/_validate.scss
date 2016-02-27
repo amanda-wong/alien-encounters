@@ -1,0 +1,26 @@
+.invalid {
+    input, select, textarea {
+        &.ng-invalid {
+            padding: 10px;
+            text-align: center;
+            animation: flashing 1s infinite;
+        }
+    }
+}
+
+@keyframes flashing {
+  0% {
+     border: 10px solid red;
+     opacity: .8;
+  }
+
+  50% {
+     border: 10px solid red;
+     opacity: .1;
+  }
+
+  100% {
+    border: 10px solid red;
+    opacity: .8;
+  }
+}
