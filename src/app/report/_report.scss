@@ -1,7 +1,8 @@
 .report {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-around;
+    background:  url(../../assets/alien.jpg)  no-repeat;
     background-color: #000;
     width: 100vw;
     height: 100vh;
@@ -10,11 +11,6 @@
         text-align: center;
         color: #fff;
         line-height: 0;
-    }
-
-    h3 {
-        text-align: center;
-        color: #fff;
     }
 }
 
@@ -26,9 +22,8 @@
         background-color: #000;
         color: #fff;
         font-size: 18px;
-        border: none;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #fff;
+        padding: 5px;
+        border: 1px solid #fff;
         &:focus {
             outline: none;
         }
@@ -36,7 +31,8 @@
 
     textarea {
         margin-top: 20px;
-        // height: 100px;
+        height: 100px;
+        border: 1px solid #fff;
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
     }
@@ -46,11 +42,19 @@
     margin: 0 20px;
     background-color: #000;
     color: #fff;
-    border: none;
-    padding: 30px 0 30px;
+    width: 265px;
+    display: flex;
+    align-self: center;
+    border: 10px solid #fff;
+    padding: 25px;
     font-size: 30px;
     cursor: pointer;
         &:focus {
             outline: none;
         }
+        &:hover {
+            color: darken(red, 30%);
+            border: 10px solid darken(red, 30%);
+        }
+
 }

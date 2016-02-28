@@ -1,12 +1,11 @@
 <div class="report">
     <h1>Report Encounter</h1>
-    <h3>Safety on Mars is your responsibility</h3>
-    <div class="report-form" name="reportForm" ng-class="{'invalid' : validate}">
+    <form class="report-form" name="reportForm" ng-class="{'invalid' : validate}">
         <select name="aliens" id="aliens" ng-model="encounter.atype" required>
             <option value="" > Select alien type </option>
             <option value="{{ alien.type }}" ng-repeat="alien in aliens">{{ alien.type }}</option>
         </select>
-        <textarea placeholder="Action taken" ng-model="encounter.action" required/></textarea>
-    </div>
+        <textarea placeholder="Action taken" ng-model="encounter.action" required></textarea>
+    </form>
     <button class="submit-report" ng-click="report($event)">Submit Report</button>
 </div>

@@ -8,17 +8,14 @@
 
 @keyframes flashing {
   0% {
-     border: 5px solid red;
-     opacity: .8;
+     border: 5px solid rgba(255, 0, 0, .8);
   }
 
   50% {
-     border: 5px solid red;
-     opacity: .1;
+     border: 5px solid rgba(255, 0, 0, .1);
   }
 
   100% {
-    border: 5px solid red;
-    opacity: .8;
+    border: 5px solid rgba(255, 0, 0, .8);
   }
 }

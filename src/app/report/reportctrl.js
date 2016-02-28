@@ -14,7 +14,7 @@
             colonist_id: $cookies.getObject('session_colonist').id,
             date: $filter('date')(Date.now(), 'yyyy-MM-dd')
         };
-        // $scope.validate = false;
+        $scope.validate = false;
 
         $http({
             method: 'GET',
@@ -28,9 +28,9 @@
         $scope.report = function(event) {
            event.preventDefault();
 
-        // if($scope.reportForm.$invalid) {
-        //     $scope.validate = true;
-        //     } else {
+        if($scope.reportForm.$invalid) {
+            $scope.validate = true;
+            } else {
 
            $http({
                method:'POST',
@@ -44,7 +44,7 @@
            }, function(error){
                console.log(error);
            });
-    //    }
+       }
        };
      }
 

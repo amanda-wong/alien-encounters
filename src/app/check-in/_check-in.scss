@@ -54,9 +54,8 @@
     padding: 25px;
     color: #fff;
     font-size: 28px;
-    border: none;
-    border: 5px solid #fff;
-    width: 169px;
+    border: 10px solid #fff;
+    width: 179px;
     display: flex;
     align-self: center;
     margin-bottom: 30px;
@@ -66,6 +65,6 @@
     &:hover {
         cursor: pointer;
         color: #228B22;
-        border: 5px solid #228B22;
+        border: 10px solid #228B22;
     }
 }
