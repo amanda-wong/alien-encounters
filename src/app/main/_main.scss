@@ -1,10 +1,19 @@
-
 .welcome {
-    background: url(../../assets/mars.jpg) center no-repeat ;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../../assets/rebelgalaxy.png) center no-repeat;
     background-size: 100% 100%;
     width: 100vw;
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
 
         h1 , h2 {
             color: #fff;
@@ -27,14 +36,20 @@
     text-align: center;
     animation: pulse 1.5s infinite;
     cursor: pointer;
+    display: flex;
+    align-self: center;
     &:focus {
         outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 red;
+    box-shadow: 0 0 0 0 transparent;
   }
 
   25% {
@@ -46,6 +61,6 @@
   }
 
   100% {
-    box-shadow: 0 0 0 0 ;
+    box-shadow: 0 0 0 0 transparent;
   }
 }
