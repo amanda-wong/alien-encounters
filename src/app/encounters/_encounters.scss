@@ -1,23 +1,21 @@
 .encounters {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
+    justify-content: center;
     h1 {
         text-align: center;
+        margin: 0;
     }
-
     .list-of-encounters {
         overflow: scroll;
         overflow-x: hidden;
         height: 300px;
+        margin: 20px 0 20px 0;
             li {
                 list-style-type: none;
                 padding: 10px 0 10px 10px;
                 margin-right: 35px;
             }
-
             li:nth-child(odd) {
                 color: #fff;
                 background: darken(red, 30%);
@@ -32,9 +30,9 @@
     font-size: 28px;
     font-weight: bold;
     border: 10px solid #000;
-    width: 230px;
+    width: 300px;
     display: flex;
-    margin-bottom: 30px;
+    align-self: center;
     &:focus {
         outline: none;
     }
