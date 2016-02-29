@@ -8,6 +8,7 @@
   /** @ngInject */
   function EncountersCtrl($scope, $http, $state) {
       var ENCOUNTERS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
+      
       $http({
           method: 'GET',
           url: ENCOUNTERS_GET_URL
@@ -15,6 +16,7 @@
           $scope.toReportPage = function(){
                 $state.go('report');
           };
+
           $scope.encounters = response.data.encounters;
 
       }, function(error){
