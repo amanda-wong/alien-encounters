@@ -28,6 +28,9 @@
         padding: 5px;
         margin-top: 25px;
         border: 1px solid #fff;
+        &::placeholder {
+            color: #fff;
+        }
         &:focus {
             color: #fff;
             outline: none;
