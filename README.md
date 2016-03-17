@@ -1,19 +1,21 @@
-## AngularJS - Seed application
+# Mars App
 
-This repository contains the basic application scaffold for **Project 4**. <br>
-It is based on the [generator-angular](https://github.com/yeoman/generator-angular)  application boilerplate.
+### Summary
 
-To install this project on your computer:
+The Mars App is a great tool that allows users to report alien encounters to the space police.
 
-Step 1 : Create a directory for on your computer and clone this repository:
+### Tools and methods
 
-	git clone https://github.com/redacademy/angular-project.git .
-    
-Step 2 : From the project's root directory, install the project dependencies:
-	
-    npm install && bower install
-    
-Step 3 : The project should now be installed. Start the local development server by typing:
+The building of this application consists of using AngularJS.
 
-	gulp serve
+Other tools and methods used include:
+* HTML/CSS (SASS)
+* Accessing the API with a GET and POST request
+* Flexbox layout
+* Gulp
+* Git and GitHub
+* MVC architecture
 
+### Experience
+
+I found Angular easier to pick up compared to React because I feel there is an obvious pattern that can be repeated through each page. I think it is a very powerful framework and I can't wait to learn more about it. 
